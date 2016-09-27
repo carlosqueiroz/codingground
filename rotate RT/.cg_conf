@@ -1,0 +1,1 @@
+{"id":"octave","ext":"m","version":"GNU Octave, v3.6.4","compile":"","execute":"octave -qf --no-window-system demo.m","preview":"","command":"","file":"/home/cg/src/samples/demo.m","url":"execute_octave_online.php","mode":"matlab"}
