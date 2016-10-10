@@ -1,0 +1,526 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"add",
+				"addClass\t.addClass()"
+			],
+			[
+				"eac",
+				"each\t$.each()"
+			],
+			[
+				"fun",
+				"fun\tfunction …"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"form",
+				"form\tTag"
+			],
+			[
+				"rea",
+				"ready\t$(document).ready"
+			],
+			[
+				"read",
+				"ready\t$(document).ready"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"css",
+				"css\t.css() - single"
+			],
+			[
+				"cs",
+				"css\t.css() - single"
+			],
+			[
+				"th",
+				"thead\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 69,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "coordinates.py",
+			"settings":
+			{
+				"buffer_size": 823,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#!/usr/bin/env python\n# coordinates.py\n# Conversão de coordenadas\n\n#import sys\nimport json\nimport numpy as np\nimport numpy.ma as ma\n\n# Recebendo JSON do PHP\n# try:\n#    data = json.loads(sys.argv[1])\n# except:\n#    print \"ERRO\"\n#    sys.exit(1)\n\n\n# Função para calcular a rotação\n\ndef get_coordinates(gantry, coll, couch):\n\n    # Rotação no Eixo Z ( Gantry )\n    gantry_matrix = np.matrix([[np.cos(gantry), np.sin(gantry), 0],\n                               [np.sin(gantry), np.cos(gantry), 0],\n                               [0, 0, 1]])\n\n    # Rotação do colimador\n    coll_matrix = np.matrix([[np.cos(coll), 0, np.sin(coll)],\n                             [0, 1, 0],\n                             [np.sin(coll), 0, np.cos(coll)]])\n\n    # Rotation no eixo Y  (couch)\n    couch_matrix = np.matrix([[np.cos(couch), 0, np.sin(couch)],\n                              [0, 1, 0],\n                              [np.sin(couch), 0, np.cos(couch)]])\n\n    return gantry_matrix * coll_matrix * couch_matrix\n\n\n# Now you can call printinfo function\n#print get_coordinates(120, 120, 120)\n\n\n# Generate some data to send to PHP\n#result = {'status': 'Yes!'}\n\n# Send it to stdout (to PHP)\n# print json.dumps(result)\n\n\n\n\n\n\nhello = \"hello\"\nworld = \"world\"\ntext = \"funcionou!\"\nprint hello + \" \" + world+\" \"+text\n",
+			"settings":
+			{
+				"buffer_size": 1288,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 372.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Laravel ",
+				"Laravel Artisan 5: App:Name"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '261dd1222b4693ce6d4f85f9c827ac06' + '6d5ab8ebdd020086947172a8a1356bb6'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/var/www/html/BEV/docs/RTDoseRead.py",
+		"/var/www/html/BEV/docs/rfb_xml.py",
+		"/var/www/html/BEV/docs/collimator2Scan.m",
+		"/var/www/html/BEV/docs/getRayTraceSingleROI.m",
+		"/var/www/html/BEV/docs/matRad_generateStf.m",
+		"/var/www/html/BEV/docs/matRad_rayTracing.m",
+		"/var/www/html/BEV/docs/planCToPB.m",
+		"/var/www/html/BEV/docs/planCToPBJaws.m",
+		"/var/www/html/BEV/docs/rayWedgeIntersect.m",
+		"/var/www/html/BEV/docs/scan2Collimator.m",
+		"/var/www/html/BEV/docs/showBeams.m",
+		"/var/www/html/BEV/bev.py",
+		"/var/www/html/php_py/JSON/index.php",
+		"/var/www/html/php_py/JSON/service.py",
+		"/var/www/html/php_py/JSON/project.sublime-project",
+		"/var/www/html/php_py/python.py",
+		"/var/www/html/php_py/index.php",
+		"/var/www/html/rt/resources/views/pacientes/show.blade.php",
+		"/var/www/html/rt/app/Http/Controllers/ConsultaController.php",
+		"/var/www/html/rt/app/Fornecedor.php",
+		"/var/www/html/rt/resources/views/configuracoes/fields/_fields_instituicao.blade.php",
+		"/var/www/html/rt/app/Http/Controllers/PacienteController.php",
+		"/var/www/html/rt/app/Http/routes.php",
+		"/var/www/html/rt/resources/views/planejamentos/create.blade.php",
+		"/var/www/html/rt/app/Http/Controllers/AgtratamentoController.php",
+		"/var/www/html/rt/resources/views/colaboradores/create.blade.php",
+		"/home/administrador/.config/sublime-text-3/Packages/AlignTab/AlignTab.sublime-settings",
+		"/var/www/html/dc/calcula.php",
+		"/var/www/html/rt/resources/views/configuracoes/fields/_fields_impressao.blade.php",
+		"/var/www/html/rt/public/assets/_con/js/_con.min.js",
+		"/var/www/html/dc/calcula-backup.php",
+		"/var/www/html/rt/public/assets/colorPicker/css/jqColor.css",
+		"/var/www/html/BEV/color.html",
+		"/var/www/html/rt/resources/views/colaboradores/_fields.blade.php",
+		"/var/www/html/rt/storage/framework/views/a938da523e416b93ddf317cd612389154dab4d5a.php",
+		"/var/www/html/rt/app/File.php",
+		"/var/www/html/dc/index.php",
+		"/var/www/html/rt/database/seeds/DatabaseSeeder.php",
+		"/var/www/html/teste.php",
+		"/etc/php/5.6/cli/php.ini",
+		"/var/www/html/VM/Homestead/src/stubs/Homestead.yaml",
+		"/media/administrador/Arquivos/Queiroz/ELETRONICA UFSC/1- Disciplinas/2016-2/Laboratorio/sodar/README.md",
+		"/media/administrador/Arquivos/Queiroz/ELETRONICA UFSC/1- Disciplinas/2016-2/Laboratorio/sodar/serial.ino",
+		"/media/administrador/Arquivos/Queiroz/ELETRONICA UFSC/1- Disciplinas/2016-2/Laboratorio/sodar/sodar.ino",
+		"/var/www/html/pn.doc",
+		"/var/www/html/php.php",
+		"/media/administrador/Arquivos/Downloads/Backup/google-chrome/Default/Bookmarks",
+		"/media/administrador/Arquivos/mint-pack.sh"
+	],
+	"find":
+	{
+		"height": 44.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"/var/www/html/rt/resources/views",
+			"/var/www/html/rt"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"self",
+			"path",
+			"numpy",
+			"self",
+			"path",
+			"coordi",
+			"upload",
+			"dados_adicionais",
+			"tipotemplate",
+			"EI_TEMP_IMPRESSAO",
+			"tbody",
+			"color_campo5",
+			"color_campo4",
+			"color_campo3",
+			"color_campo2",
+			"color_campo1",
+			"color_campo",
+			"color_campo1",
+			"COR",
+			"label",
+			"pacientedata",
+			"alldata",
+			"path_foto",
+			"DI_LOGO",
+			"<",
+			"DI_LOGO",
+			"Imagem Salva",
+			"salvar",
+			"call",
+			"DB::table(",
+			"configuracoes",
+			"salvar",
+			"myform",
+			"token",
+			"ajax",
+			"raw_image_data",
+			"read",
+			"avatar-gray.png",
+			")); ?>",
+			"<?php echo e(url('/uploads/arquivos/",
+			"asset('assets/_con/images/",
+			"foto",
+			"class=\"color_campo5\"",
+			"class=\"color_campo4\"",
+			"class=\"color_campo3\"",
+			"class=\"color_campo2\"",
+			"class=\"color_campo1\"",
+			"color_campo2",
+			"color_campo1",
+			"RTPlanLabel",
+			"<table",
+			"table",
+			"spectrum",
+			"plan",
+			"plan5",
+			"plan4",
+			"plan3",
+			"plan2",
+			"plan1",
+			"plan2",
+			"plan1",
+			"src=\"colorPicker/",
+			"../",
+			"gantry.png",
+			"gantry.pnh",
+			"url",
+			"gantry.png",
+			"AL_6MV",
+			"px",
+			"sind",
+			"cosd",
+			"sourcePoint_bev",
+			"j, 4",
+			"j,4",
+			"RayPosTmp",
+			"rayPos_bev",
+			"targetPoint",
+			"ScanSpotPositionMap",
+			"stf(i).ray",
+			"RayPosTmp",
+			"targetPoint_bev",
+			"rayPos_bev",
+			"rotated",
+			"rotMx_XY_rotated",
+			"rotMx_XZ_rotated",
+			"stf(i).ray(j).",
+			"rayPos_bev",
+			"pln.couchAngles(i)",
+			"pln.gantryAngles(i)",
+			"extension=php_intl.dll",
+			"360"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"np",
+			"EI_COR_0",
+			"EI_COR_5",
+			"EI_COR_4",
+			"EI_COR_3",
+			"EI_COR_2",
+			"EI_COR_1",
+			") }}",
+			"{{ asset('assets/_con/images/",
+			"class=\"fase5 color_campo5\"",
+			"class=\"fase4 color_campo4\"",
+			"class=\"fase3 color_campo3\"",
+			"class=\"fase2 color_campo2\"",
+			"class=\"fase1 color_campo1\"",
+			"fase2 color_campo2",
+			"fase1 color_campo1",
+			"color_campo",
+			"color_campo5",
+			"color_campo4",
+			"color_campo3",
+			"color_campo2",
+			"color_campo1",
+			"color_campo2",
+			"color_campo1",
+			"src=\"{{ asset('assets/colorPicker/",
+			"colorPicker/js/",
+			"%",
+			"sin",
+			"cos",
+			"T",
+			"",
+			"couchAngles",
+			"gantryAngles"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 69,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								32,
+								32
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "coordinates.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 823,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								819,
+								819
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 137.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1288,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1288,
+								1288
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 197.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "coordinates.sublime-project",
+	"replace":
+	{
+		"height": 82.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 267.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
